@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek | Creative Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-mesh"></div>
+    <div class="cursor-glow"></div>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">A<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="status-badge">
+                    <span class="pulse"></span> Available for work
+                </div>
+                <h1 class="glitch-text" data-text="Creative Developer.">Creative Developer.</h1>
+                <p>Crafting high-performance web experiences with motion, interaction, and modern architecture. A perfect blend of engineering and beautiful design.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary">Explore My Work <span class="arrow">→</span></a>
+                    <button id="helloBtn" class="btn secondary">Say Hello</button>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-header">
+                <h2>01. Background</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-container glass-panel">
+                <div class="about-text">
+                    <h3 class="gradient-text">Engineering meets aesthetics.</h3>
+                    <p>I am a developer focused on building exceptional digital experiences. I specialize in creating architectural, performant, and cinematic interfaces that engage users and solve complex problems.</p>
+                    <p>My approach bridges the gap between intricate backend logic and seamless frontend design, ensuring every project is as robust under the hood as it is beautiful on the screen. Let's build the future together.</p>
+                </div>
+                <div class="skills">
+                    <div class="skill-category">
+                        <h4>Core Focus</h4>
+                        <ul class="skills-list">
+                            <li>JavaScript (ES6+)</li>
+                            <li>HTML5 / Semantics</li>
+                            <li>Modern CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tooling</h4>
+                        <ul class="skills-list">
+                            <li>Responsive Web Design</li>
+                            <li>UI/UX Logic</li>
+                            <li>Web Performance Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="section-header">
+                <h2>02. Featured Work</h2>
+                <div class="line"></div>
+            </div>
+            <div class="project-grid">
+                
+                <!-- Project 1: Science Literacy -->
+                <div class="project-card glass-panel group">
+                    <div class="project-img-container">
+                        <div class="project-placeholder gradient-1">
+                            <span class="placeholder-icon">🔬</span>
+                        </div>
+                        <div class="overlay">
+                            <a href="#" class="view-btn">View Live</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="tag">Education</span>
+                            <span class="year">Full-stack</span>
+                        </div>
+                        <h3>Science Literacy</h3>
+                        <p>A full-stack educational platform focused on promoting scientific thinking and awareness through interactive articles, quizzes, and experiments.</p>
+                        <ul class="tech-stack">
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2: ChurnSense -->
+                <div class="project-card glass-panel group">
+                    <div class="project-img-container">
+                        <div class="project-placeholder gradient-2">
+                             <span class="placeholder-icon">📊</span>
+                        </div>
+                        <div class="overlay">
+                            <a href="#" class="view-btn">View Live</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="tag">Machine Learning</span>
+                            <span class="year">Pipeline</span>
+                        </div>
+                        <h3>ChurnSense</h3>
+                        <p>A machine learning pipeline built to predict customer churn using behavioral and demographic data, helping businesses identify at-risk customers.</p>
+                        <ul class="tech-stack">
+                            <li>Python</li>
+                            <li>Classification</li>
+                            <li>Data Viz</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 3: Healthcare Web App -->
+                <div class="project-card glass-panel group">
+                    <div class="project-img-container">
+                        <div class="project-placeholder gradient-3">
+                             <span class="placeholder-icon">⚕️</span>
+                        </div>
+                        <div class="overlay">
+                            <a href="#" class="view-btn">View Live</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="tag">Healthcare</span>
+                            <span class="year">Frontend</span>
+                        </div>
+                        <h3>Healthcare Web App</h3>
+                        <p>A responsive healthcare application enabling users to efficiently browse doctors, book appointments, and manage their personal accounts.</p>
+                        <ul class="tech-stack">
+                            <li>UI Design</li>
+                            <li>Frontend</li>
+                            <li>Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+             <div class="section-header">
+                <h2>03. Get In Touch</h2>
+                <div class="line"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 class="gradient-text">Let's build together.</h3>
+                    <p>I'm currently open for new opportunities or freelance projects. Connect with me directly below!</p>
+                    <div class="contact-methods">
+                        <div class="method">
+                            <span class="label">Email</span>
+                            <a href="mailto:hello@example.com" class="value">contact@example.com</a>
+                        </div>
+                        <div class="method">
+                            <span class="label">Location</span>
+                            <span class="value">Remote / Global</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contactForm" class="contact-form glass-panel">
+                    <div class="input-row">
+                        <div class="form-group">
+                            <label for="name">Name <span class="req">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="John Doe">
+                            <span class="error-msg" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="req">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com">
+                            <span class="error-msg" id="emailError"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message <span class="req">*</span></label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..."></textarea>
+                        <span class="error-msg" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn primary submit-btn">
+                        <span>Send Message</span>
+                        <div class="btn-loader"></div>
+                    </button>
+                    <div id="formSuccess" class="success-msg">Message sent successfully.</div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">A<span>.</span></div>
+            <p>&copy; 2026 Abhishek. Pure Static Logic without dependencies.</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
