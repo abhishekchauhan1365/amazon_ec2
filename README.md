@@ -92,3 +92,25 @@ amazon_ec2/
 ## ✅ Result
 
 Successfully deployed a fully responsive and interactive portfolio website on AWS EC2, accessible via public IP.
+No Access Instance
+<img width="1919" height="856" alt="image" src="https://github.com/user-attachments/assets/af4d0909-71a9-47ea-a2f0-4de967bf9ac3" />
+
+Full Access Instance
+<img width="1919" height="921" alt="image" src="https://github.com/user-attachments/assets/daacb27d-a8df-4485-9af9-7d73e98ef02e" />
+
+Working Instance link
+<img width="1919" height="963" alt="image" src="https://github.com/user-attachments/assets/627701af-baaf-449c-9941-8e7ad8db4835" />
+
+## Challenges Faced 
+## ⚠️ Challenges Faced
+
+* Faced SSH connection timeout initially due to missing **port 22 (SSH)** rule in the security group
+* Website was not loading at first because **port 80 (HTTP)** was not enabled
+* Confusion with file paths in Windows (`Desktop` vs `OneDrive/Desktop`) while uploading files using SCP
+* Apache default page ("It works!") was showing instead of portfolio because files were not placed correctly in `/var/www/html`
+* IAM users were created but could not log in initially because **console access was not enabled**
+* Password authentication issues occurred during first login due to AWS forced password reset
+* Faced SCP connection timeout until SSH rule was properly configured
+
+
+
