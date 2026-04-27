@@ -1,116 +1,101 @@
-# amazon_ec2
+# AWS S3 Static Website Hosting with Versioning & Lifecycle Management
 
-Personal cinematic developer portfolio built completely from scratch using pure HTML, CSS, and JS (no frameworks, no templates). Designed with modern glassmorphic UI, animated gradients, and interactive effects. Deployed as a static website on AWS EC2 using Apache.
+## 👤 Name
 
----
+Abhishek Chauhan
 
-## 🌐 Live Website
+## 🎓 Registration Number
 
-http://13.205.110.91
-
----
-
-## 🚀 How It Was Created
-
-### Step 1: Core Setup
-
-* Built using `index.html`, `style.css`, and `script.js`
-* Used semantic HTML and responsive layout
-* Integrated Google Fonts (Inter, Outfit)
-
-### Step 2: UI & Styling
-
-* Dark theme using CSS variables
-* Glassmorphism using `backdrop-filter`
-* Responsive layout using Flexbox & Grid
-* Gradient background effects
-
-### Step 3: Interactivity (JavaScript)
-
-* Custom cursor glow effect
-* Scroll spy navigation
-* Responsive mobile menu
-* Contact form validation with loading animation
-
-### Step 4: Content Integration
-
-* Added real project data:
-
-  * Science Literacy
-  * ChurnSense
-  * Healthcare Web App
+12305863
 
 ---
 
-## ☁️ AWS EC2 Deployment (What I Did)
+## 🌐 Deployed Website (S3 URL)
 
-1. Launched EC2 instance (Amazon Linux)
-2. Configured Security Group:
+http://abhishek-portfolio-s3-2026.s3-website.ap-south-1.amazonaws.com/
 
-   * Port 22 (SSH)
-   * Port 80 (HTTP)
-3. Connected to instance using SSH
-4. Installed Apache web server:
+---
 
-   ```bash
-   sudo yum install httpd -y
-   sudo systemctl start httpd
-   sudo systemctl enable httpd
-   ```
-5. Transferred files using SCP:
+## 📌 Objective
 
-   ```bash
-   scp -i ec2_key.pem -r ec2 ec2-user@<public-ip>:/home/ec2-user/
-   ```
-6. Moved files to web directory:
+To host a static website using Amazon S3 and demonstrate versioning and lifecycle management for storage optimization.
 
-   ```bash
-   sudo cp -r ec2/* /var/www/html/
-   ```
-7. Restarted Apache:
+---
 
-   ```bash
-   sudo systemctl restart httpd
-   ```
-8. Accessed website using public IP
+## 🪣 S3 Bucket Setup
+
+* Created a globally unique S3 bucket
+* Disabled block public access
+* Uploaded static website files (HTML, CSS, JS)
+
+---
+
+## 🌍 Static Website Hosting
+
+* Enabled static website hosting
+* Set `index.html` as the entry point
+* Accessed website via S3 endpoint
+
+---
+
+## 🔁 Versioning
+
+* Enabled versioning on the bucket
+* Uploaded multiple versions of `index.html`
+* Verified versions using **“Show versions”**
+
+---
+
+## ♻️ Lifecycle Rules
+
+* Transitioned current objects to **Standard-IA after 30 days**
+* Deleted noncurrent versions after **30 days**
 
 ---
 
 ## 📁 Project Structure
 
+```id="p3f8tk"
+index.html  
+style.css  
+script.js  
+README.md  
 ```
-amazon_ec2/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
+
+---
+
+## 📸 Screenshots
+
+### S3 Bucket (Files Uploaded)
+
+<img width="1919" height="894" alt="image" src="https://github.com/user-attachments/assets/c986cfbe-845e-4f11-aad4-2beae3af11ae" />
+
+
+### Versioning (Multiple Versions Visible)
+
+<img width="1919" height="886" alt="image" src="https://github.com/user-attachments/assets/36e7d2ba-bd82-4772-b157-953959c65ca7" />
+
+
+### Lifecycle Rule Configuration
+
+<img width="1919" height="891" alt="image" src="https://github.com/user-attachments/assets/869b0e54-0c28-446a-8d7f-38a8c0fea1e6" />
+
+
+### Website Running
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/1b3f67b4-58a0-41f5-a477-3fc6a661bdb7" />
+
+
+---
+
+## ⚠️ Challenges Faced
+
+* Configuring public access without causing permission errors
+* Understanding difference between current and noncurrent versions in lifecycle rules
+* Verifying versioning through multiple uploads
 
 ---
 
 ## ✅ Result
 
-Successfully deployed a fully responsive and interactive portfolio website on AWS EC2, accessible via public IP.
-No Access Instance
-<img width="1919" height="856" alt="image" src="https://github.com/user-attachments/assets/af4d0909-71a9-47ea-a2f0-4de967bf9ac3" />
-
-Full Access Instance
-<img width="1919" height="921" alt="image" src="https://github.com/user-attachments/assets/daacb27d-a8df-4485-9af9-7d73e98ef02e" />
-
-Working Instance link
-<img width="1919" height="963" alt="image" src="https://github.com/user-attachments/assets/627701af-baaf-449c-9941-8e7ad8db4835" />
-
-## Challenges Faced 
-## ⚠️ Challenges Faced
-
-* Faced SSH connection timeout initially due to missing **port 22 (SSH)** rule in the security group
-* Website was not loading at first because **port 80 (HTTP)** was not enabled
-* Confusion with file paths in Windows (`Desktop` vs `OneDrive/Desktop`) while uploading files using SCP
-* Apache default page ("It works!") was showing instead of portfolio because files were not placed correctly in `/var/www/html`
-* IAM users were created but could not log in initially because **console access was not enabled**
-* Password authentication issues occurred during first login due to AWS forced password reset
-* Faced SCP connection timeout until SSH rule was properly configured
-
-
-
+Successfully hosted a static website on Amazon S3 with versioning and lifecycle rules implemented.
